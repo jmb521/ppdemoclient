@@ -1,4 +1,40 @@
 <!DOCTYPE html>
-
+    <head>
+        <title>
+            My Page
+        </title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="src/ApiProvider.js"></script>
+        <script src="src/User.js"></script>
+        <script src="src/Timeslot.js"></script>
+        <script defer src="src/index.js"></script>
+    </head>
+    <body>
+        <div class="container" id="main-container">
+            <div id="user-form-div">
+                <form id="user-form">
+                    <input type="text" name="email" placeholder="Email" />
+                    <br />
+                    <input type="text" name="name" placeholder="Name" />
+                    <br />
+                    <input type="submit" name="submit" />
+                </form>
+            </div>
+         
+        </div>
+        <form id="create-timeslot-form">
+            <div class="timeslot-wrapper">
+                <div class="timeslot-inputs">
+                    Activity: <input type="text" name="activity"/>
+                    <br />
+                    Time: <input type="datetime-local" name="booked_time" />
+                    <br />
+                    <button class="delete-timeslot" style="color: red">X</button>
+                </div>
+            </div>
+            <button class="duplicate-timeslot">Duplicate</button>
+            <input type="submit" name="submit" value="Create timeslots"/>
+        </form>
+    </body>
 
 </htm>
