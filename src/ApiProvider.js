@@ -28,6 +28,7 @@ class ApiProvider {
 
     getTimeslots() {
         return fetch(this.timeslotUrl)
+        .then(response => response.json())
     }
 
     getTimeslot(id) {
@@ -35,7 +36,7 @@ class ApiProvider {
     }
 
     updateTimeslot(timeslot) {
-        return fetch(this.timeslotUrl + "/" + id, {
+        return fetch(this.timeslotUrl + "/" + timeslot.id, {
             method: "PATCH", 
             headers: {
                 "Content-Type": "application/json", 
@@ -43,5 +44,10 @@ class ApiProvider {
             }, 
             body: JSON.stringify({timeslot: timeslot})
         })
+        .then(response => response.json())
+    }
+    getCurrentUser(id) {
+        return fetch(this.userUrl + "/" + id)
+        .then(response => response.json())
     }
 }

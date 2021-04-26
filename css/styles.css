@@ -1,0 +1,28 @@
+table, tr, td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+ul li {
+    list-style-type: none;
+    float: left;
+    padding-right: 25px;
+    display: block;
+    border: 1px solid lightgray;
+    background-color: lightgray;
+    margin: auto;
+    /* vertical-align: auto; */
+}
+nav {
+    width: 100%;
+    padding-bottom: 30px;
+    background-color: lightgray;
+}
+li {
+    text-align: center;
+    vertical-align: center;
+}
+.errors {
+    color: red;
+    font-weight: bold;
+}

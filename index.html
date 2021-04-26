@@ -10,6 +10,14 @@
         <script defer src="src/index.js"></script>
     </head>
     <body>
+        <nav>
+            <ul>
+                <li id="nav-available">Available Timeslots</li>
+                <li id="nav-alltimeslots">All Timeslots</li>
+                <li id="nav-mytimeslots">My Timeslots</li>
+            </ul>
+        </nav>
+        <div class="errors"></div>
         <div class="container" id="main-container">
             <div id="user-form-div">
                 <form id="user-form">
@@ -29,12 +37,31 @@
                     <br />
                     Time: <input type="datetime-local" name="booked_time" />
                     <br />
-                    <button class="delete-timeslot" style="color: red">X</button>
+                    <button class="delete-timeslot" style="color: red" name="button">X</button>
                 </div>
             </div>
-            <button class="duplicate-timeslot">Duplicate</button>
+            <input type="hidden" name="user_id" class="hidden" />
+            <button class="duplicate-timeslot" name="button">Duplicate</button>
             <input type="submit" name="submit" value="Create timeslots"/>
         </form>
+        <div class="timeslot-table-info">
+            <h2 class="table-header">Available timeslots:</h2>
+            <table class="timeslot-table">
+                <thead>
+                    <tr>
+                        <th>Activity: </th>
+                        <th>Time: </th>
+                        <th class="with-header">With: </th>
+                        <th>Taken: </th>
+
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+
+                </tbody>
+             
+            </table>
+        </div>
     </body>
 
 </htm>
